@@ -1,5 +1,6 @@
 describe('Ability', function () {
 
+
   describe('rules', function () {
     var currentAbility;
 
