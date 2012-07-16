@@ -1,23 +1,5 @@
 // {"rules":[{"match_all":false,"base_behavior":true,"actions":["manage"],"subjects":["all"],"conditions":{},"block":null}]}
 
-currentAbility = {
-  can: function (action, subject) {
-    matching_rules = _.filter(rules, function (rule) {
-    });
-  },
-  rules: [
-    {
-      "match_all":false,
-      "base_behavior":true,
-      "actions":["manage"],
-      "subjects":["all"],
-      "conditions":{},
-      "block":null
-    }
-  ]
-}
-
-
 function Rule(attributes) {
   this.actions = attributes.actions;
   this.subjects = attributes.subjects;
