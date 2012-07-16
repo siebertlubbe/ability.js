@@ -2,41 +2,24 @@ describe('Rule', function () {
 
   describe('creating a new rule', function () {
 
-    describe('actions', function () {
-
-      it('should set actions to an array with the passed actions', function () {
-        rule = new Rule({actions: ['read', 'write']});
-        expect(rule.actions).toEqual(['read', 'write']);
-      });
-
-      it('should set actions to undefined if no actions are passed', function () {
-        rule = new Rule({});
-        expect(rule.actions).toBeUndefined();
-      });
-
+    it('should set actions to an array with the passed actions', function () {
+      rule = new Rule({actions: ['read', 'write']});
+      expect(rule.actions).toEqual(['read', 'write']);
     });
 
-    describe('subjects', function () {
-
-      it('should set subjects to an array with the passed subjects', function () {
-        rule = new Rule({subjects: ['read', 'write']});
-        expect(rule.subjects).toEqual(['read', 'write']);
-      });
-
-      it('should set subjects to undefined if no subjects are passed', function () {
-        rule = new Rule({});
-        expect(rule.subjects).toBeUndefined();
-      });
-
+    it('should set subjects to an array with the passed subjects', function () {
+      rule = new Rule({subjects: ['read', 'write']});
+      expect(rule.subjects).toEqual(['read', 'write']);
     });
 
-    describe('conditions', function () {
+    it('should set conditions', function () {
+      rule = new Rule({conditions: {'test': 'test'}});
+      expect(rule.conditions).toEqual({'test': 'test'});
+    });
 
-      it('should set conditions to if provided', function () {
-        rule = new Rule({conditions: {'test': 'test'}});
-        expect(rule.conditions).toEqual({'test': 'test'});
-      });
-
+    it('should set baseBehavior', function () {
+      rule = new Rule({base_behavior: true});
+      expect(rule.baseBehavior).toEqual(true);
     });
 
     describe('matchAll', function () {

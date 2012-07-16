@@ -22,6 +22,7 @@ function Rule(attributes) {
   this.actions = attributes.actions;
   this.subjects = attributes.subjects;
   this.conditions = attributes.conditions;
+  this.baseBehavior = attributes.base_behavior;
   this.matchAll = (this.actions === undefined && this.subjects === undefined);
 
   this.relevant = function (action, subject) {
@@ -67,7 +68,7 @@ function Ability(currentAbility) {
   };
 
   this.relevant_rules = function (action, subject) {
-    return _(ability.rules).filter(function (rule) {
+    return _(this.rules).filter(function (rule) {
       return rule.relevant(action, subject);
     });
   };

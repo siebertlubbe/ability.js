@@ -32,11 +32,11 @@ describe('Ability', function () {
       ability = new Ability(currentAbility);
     });
 
-    it('should return true if the subject and action matches an exist rule', function () {
+    it('should return true if the subject and action matches an existing rule', function () {
       expect(ability.can('read', 'posts')).toBeTruthy();
     });
 
-    it('should return false if the subject and action does not match any exist rules', function () {
+    it('should return false if the subject and action does not match any existing rules', function () {
       expect(ability.can('create', 'posts')).toBeFalsy();
     });
 
