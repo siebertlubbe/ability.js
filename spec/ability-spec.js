@@ -27,7 +27,7 @@ describe('Ability', function () {
 
     beforeEach(function () {
       currentAbility = {"rules":[
-        {"actions":["read"],"subjects":["posts"]}
+        {"actions":["read"],"subjects":["posts"],"base_behavior":true}
       ]};
       ability = new Ability(currentAbility);
     });
